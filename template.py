@@ -8,9 +8,17 @@ for i in range(n):
     formulaTime += ((2**i + 1)**(n-i))
   elif i%2== 1 :
     formulaTime += ((3**i + 1)**(n-i))  
+floor = 0
+ceil = 1000
+guess = (floor + ceil)/2
+while formulaTime*T =! B:
+  T = guess
+  if formulaTime*T < B:
+    floor = guess
+  elif formulaTime > B:
+    ceil = guess  
 
-while formulaTime*T <= B:
-  T += 1
+  
 # please do not modify the input and print statements
 # and make sure that your code does not have any other print statements
 print(T)
